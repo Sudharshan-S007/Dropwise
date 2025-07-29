@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropwise - Sustainable Water Saving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-blue-700 text-white p-6 sticky top-0 z-20 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold tracking-tight">Dropwise</h1>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="#home" class="hover:text-blue-200 transition">Home</a></li>
+                <li><a href="#tips" class="hover:text-blue-200 transition">Tips</a></li>
+                <li><a href="#calculator" class="hover:text-blue-200 transition">Calculator</a></li>
+                <li><a href="#quiz" class="hover:text-blue-200 transition">Quiz</a></li>
+                <li><a href="#gallery" class="hover:text-blue-200 transition">Gallery</a></li>
+                <li><a href="#footprint" class="hover:text-blue-200 transition">Footprint</a></li>
+                <li><a href="#newsletter" class="hover:text-blue-200 transition">Newsletter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Custom Image and Water Drop Animation -->
+    <section id="home" class="bg-gradient-to-r from-blue-500 to-teal-500 py-24 text-center text-white relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="water-drop" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="water-drop" style="left: 30%; animation-delay: 0.5s;"></div>
+            <div class="water-drop" style="left: 50%; animation-delay: 1s;"></div>
+            <div class="water-drop" style="left: 70%; animation-delay: 1.5s;"></div>
+            <div class="water-drop" style="left: 90%; animation-delay: 2s;"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="mb-8 fade-in">
+                <img src="images/hero-image.jpg" alt="Sustainable Water Hero" class="custom-image max-w-md mx-auto h-64">
+            </div>
+            <h2 class="text-5xl font-bold mb-6">Save Water, Sustain Tomorrow</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Discover sustainable water-saving practices with Dropwise. Engage, learn, and act to preserve our planet's most vital resource.</p>
+            <a href="#calculator" class="bg-white text-blue-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-100 ripple-effect">Calculate Your Water Usage</a>
+        </div>
+    </section>
+
+    <!-- Tips Section with Custom Images -->
+    <section id="tips" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Water-Saving Tips</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="tip-card bg-blue-50 p-8 rounded-xl shadow-lg transition-transform duration-300 fade-in" style="animation-delay: 0.2s;">
+                    <img src="images/leak-fix.jpg" alt="Fix Leaks" class="custom-image h-48 mb-4">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Fix Leaks Promptly</h3>
+                    <p class="text-gray-600">A single dripping faucet can waste up to 3,000 gallons per year. Regular checks can save significant water.</p>
+                </div>
+                <div class="tip-card bg-blue-50 p-8 rounded-xl shadow-lg transition-transform duration-300 fade-in" style="animation-delay: 0.4s;">
+                    <img src="images/shower.jpg" alt="Short Showers" class="custom-image h-48 mb-4">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Shorter Showers</h3>
+                    <p class="text-gray-600">Limit showers to 5 minutes to save up to 12.5 gallons per session. Use a timer to stay on track.</p>
+                </div>
+                <div class="tip-card bg-blue-50 p-8 rounded-xl shadow-lg transition-transform duration-300 fade-in" style="animation-delay: 0.6s;">
+                    <img src="images/appliances.jpg" alt="Efficient Appliances" class="custom-image h-48 mb-4">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Efficient Appliances</h3>
+                    <p class="text-gray-600">Opt for water-efficient washing machines and dishwashers to cut down on usage significantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Usage Calculator -->
+    <section id="calculator" class="py-20 bg-blue-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 fade-in">Water Usage Calculator</h2>
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-lg fade-in" style="animation-delay: 0.2s;">
+                <div class="mb-6">
+                    <label for="shower" class="block text-left text-lg mb-2">Showers per week (5 min each):</label>
+                    <input type="number" id="shower" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" min="0" value="0">
+                </div>
+                <div class="mb-6">
+                    <label for="toilet" class="block text-left text-lg mb-2">Toilet flushes per day:</label>
+                    <input type="number" id="toilet" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" min="0" value="0">
+                </div>
+                <div class="mb-6">
+                    <label for="laundry" class="block text-left text-lg mb-2">Loads of laundry per week:</label>
+                    <input type="number" id="laundry" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" min="0" value="0">
+                </div>
+                <button id="calculate" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 ripple-effect">Calculate</button>
+                <p id="result" class="mt-6 text-xl font-semibold text-gray-800"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section for Custom Images -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in">Water Conservation Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <img src="images/gallery1.jpg" alt="Water Conservation 1" class="custom-image h-64">
+                </div>
+                <div class="fade-in" style="animation-delay: 0.4s;">
+                    <img src="images/gallery2.jpg" alt="Water Conservation 2" class="custom-image h-64">
+                </div>
+                <div class="fade-in" style="animation-delay: 0.6s;">
+                    <img src="images/gallery3.jpg" alt="Water Conservation 3" class="custom-image h-64">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section id="quiz" class="py-20 bg-blue-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 fade-in">Water-Saving Quiz</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg fade-in" style="animation-delay: 0.2s;">
+                <p id="quiz-question" class="text-xl mb-6 font-semibold"></p>
+                <div id="quiz-options" class="grid grid-cols-1 gap-4"></div>
+                <p id="quiz-result" class="mt-6 text-lg font-semibold"></p>
+                <button id="next-question" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 ripple-effect mt-6 hidden">Next Question</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Footprint Visualizer -->
+    <section id="footprint" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 fade-in">Your Water Footprint</h2>
+            <div class="max-w-lg mx-auto fade-in" style="animation-delay: 0.2s;">
+                <canvas id="water-footprint-canvas" class="bg-white rounded-lg shadow-lg" width="400" height="200"></canvas>
+                <p class="mt-4 text-lg text-gray-600">Visual representation of your water usage (updated after calculator).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section id="newsletter" class="py-20 bg-blue-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 fade-in">Join Our Newsletter</h2>
+            <div class="max-w-md mx-auto fade-in" style="animation-delay: 0.2s;">
+                <input type="email" id="newsletter-email" class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email">
+                <button id="newsletter-signup" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 ripple-effect">Sign Up</button>
+                <p id="newsletter-message" class="mt-4 text-lg text-gray-600"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot-icon" class="fixed bottom-6 right-6 z-30">
+        <img src="images/chat-icon.png" alt="Chatbot" class="w-16 h-16 cursor-pointer hover:scale-110 transition-transform">
+    </div>
+    <div id="chatbot-window" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-lg shadow-xl z-30">
+        <div class="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+            <h3 class="text-lg font-semibold">Dropwise Chatbot</h3>
+            <button id="chatbot-close" class="text-white hover:text-gray-200">✕</button>
+        </div>
+        <div id="chatbot-messages" class="p-4 h-64 overflow-y-auto bg-gray-50"></div>
+        <div class="p-4 border-t">
+            <input type="text" id="chatbot-input" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask about water saving...">
+            <button id="chatbot-send" class="bg-blue-600 text-white px-4 py-2 rounded-full mt-2 w-full hover:bg-blue-700 ripple-effect">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">&copy; 2025 Dropwise. All rights reserved.</p>
+            <p class="mt-2">Follow us on social media for more water-saving tips!</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
